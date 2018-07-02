@@ -40,6 +40,7 @@ Special.create(name: "Spatial", comedian_id: reggie.id)
 tj = Comedian.create(name: "T.J. Miller", age: 36)
 Special.create(name: "Meticulously Ridiculous", comedian_id: tj.id)
 
+al = Comedian.create(name: 'T.J. Miller', age: 36)
 Special.create(name: "Why is Rabbit Crying", comedian_id: al.id)
 
 kumail = Comedian.create(name: "Kumail Nanjiani", age: 39)
