@@ -1,18 +1,19 @@
-<h2>Comedians</h2>
+<html>
+  <head>
+    <title>Comedians</title>
+  </head>
 
-<h4> Average Age: <%= @average_age %>
-
-<% @comedians.each do |comedian| %>
-     <h4> <%= comedian.name %> </h4>
-     <p> Age: <%= comedian.age %> </p>
-     <p> Number of Specials: <%= @specials.find_all do |special|
-       special.comedian_id == comedian.id
-     end.count %> </p>
-     Specials:
-     <% comedians_specials = @specials.find_all do |special|
-       special.comedian_id == comedian.id
-     end %>
-     <% comedians_specials.each do |special| %>
-       <p> <%=special.name %>
-     <% end %>
-<% end %>
+  <body>
+    <h1>Comedians</h1>
+    <h3>Average Age: <%= @average_age %></h3>
+    <% @comedians.each do |comedian| %>
+         <h4> <%= comedian.name %> </h4>
+         <p> Age: <%= comedian.age %> </p>
+         <p> Number of Specials: <%= comedian.number_of_specials %> </p>
+         Specials:
+         <% comedian.specials.each do |special| %>
+          <p><%= special.name %></p>
+         <% end %>
+    <% end %>
+  </body>
+</html>
